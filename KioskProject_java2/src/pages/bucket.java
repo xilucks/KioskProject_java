@@ -16,6 +16,7 @@ public class bucket extends JFrame {
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         c.add(new JLabel("장바구니"));
+        c.add(new JLabel(Main.core));
         Button tmp = new Button("돌아가기");
 
         tmp.addActionListener(new ActionListener() {

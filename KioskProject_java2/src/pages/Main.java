@@ -32,7 +32,7 @@ public class Main extends JFrame {
 
 
     //resize method
-    public ImageIcon resize(String path){
+    public static ImageIcon resize(String path){
         ImageIcon icon = new ImageIcon(path);
         Image img = icon.getImage();
         Image reSizeImg = img.getScaledInstance(200,100,Image.SCALE_SMOOTH);
@@ -47,10 +47,18 @@ public class Main extends JFrame {
         setTitle("메인 메뉴");
 
         //Component Setting
+        JPanel header = new JPanel();
         JButton eggm = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/eggm.png"));
         JButton itbmt = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/itbmt.png"));
         JButton lostchicken = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/lostchicken.png"));
         JButton meatmball = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/meatball.png"));
+
+        //메뉴판 제작
+        JPanel menu = new JPanel(new GridLayout(2,2));
+        menu.add(eggm);
+        menu.add(itbmt);
+        menu.add(lostchicken);
+        menu.add(meatmball);
 
         //test data
         Button bucketButton = new Button("장바구니");
@@ -59,13 +67,11 @@ public class Main extends JFrame {
         //Container Setting
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
-        c.add(new JLabel("메인페이지"));
-        c.add(eggm);
-        c.add(itbmt);
-        c.add(lostchicken);
-        c.add(meatmball);
+        header.add(new JLabel("메인페이지"));
 
         //test data
+        c.add(header);
+        c.add(menu);
         c.add(bucketButton);
         c.add(Test);
 
@@ -85,9 +91,27 @@ public class Main extends JFrame {
         eggm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                core = "egg";
             }
         });
+         itbmt.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        core = "itbmt";
+                    }
+                });
+         lostchicken.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        core = "lostchicken";
+                    }
+                });
+         meatmball.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        core = "meatball";
+                    }
+                });
 
         bucketButton.addActionListener(new ActionListener() {
             @Override

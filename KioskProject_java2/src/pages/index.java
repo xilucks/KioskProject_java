@@ -13,17 +13,29 @@ public class index extends JFrame {
     public index(){
 
         //set Component
+        JLabel logo = new JLabel(Main.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/logo.png"));
         Button start = new Button("주문 시작하기");
         Button close = new Button("닫기");
+        JPanel logoArea = new JPanel();
+        JPanel buttons = new JPanel();
+
+
+
 
         //graphic
         setTitle("시작하기");
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
-        c.add(new JLabel("주문 시작하기"));
-        c.add(start);
-        c.add(close);
+        logoArea.add(logo);
+        buttons.add(start);
+        buttons.add(close);
+        c.add(logoArea, BorderLayout.NORTH);
+        c.add(buttons, BorderLayout.SOUTH);
 
+
+        //display setting
+        setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
+        logo.setHorizontalAlignment(JLabel.CENTER); //로고 가운데 정렬
         setSize(500,1000);
         setVisible(true);
 
@@ -33,6 +45,7 @@ public class index extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new Main();
+                setVisible(false);
 
             }
         });
