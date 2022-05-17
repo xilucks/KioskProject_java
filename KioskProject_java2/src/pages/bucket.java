@@ -16,7 +16,7 @@ public class bucket extends JFrame {
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         c.add(new JLabel("장바구니"));
-        c.add(new JLabel(Main.core));
+        c.add(new JLabel(Menu.core));
         Button tmp = new Button("돌아가기");
 
         tmp.addActionListener(new ActionListener() {
@@ -35,6 +35,7 @@ public class bucket extends JFrame {
         }
 
         setSize(500,1000);
+        setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
         setVisible(true);
 
     }

@@ -13,7 +13,7 @@ public class index extends JFrame {
     public index(){
 
         //set Component
-        JLabel logo = new JLabel(Main.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/logo.png"));
+        JLabel logo = new JLabel(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/logo.png"));
         Button start = new Button("주문 시작하기");
         Button close = new Button("닫기");
         JPanel logoArea = new JPanel();
@@ -44,7 +44,7 @@ public class index extends JFrame {
         start.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Main();
+                new Menu();
                 setVisible(false);
 
             }
