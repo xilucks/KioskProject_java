@@ -69,32 +69,35 @@ public class Bread extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Menu.bread = "egg";
+                new Cheese();
             }
         });
          Heaty.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        Menu.bread = "itbmt";
-                    }
-                });
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 Menu.bread = "itbmt";
+                 new Cheese();
+             }
+         });
          wheat.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        Menu.bread = "lostchicken";
-                    }
-                });
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 Menu.bread = "lostchicken";
+                 new Cheese();
+             }
+         });
          white.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        Menu.bread = "meatball";
-                    }
-                });
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 Menu.bread = "meatball";
+                 new Cheese();
+             }
+         });
 
         bucketButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new bucket();
-                new pages.Bread();
                 setVisible(false);
             }
         });

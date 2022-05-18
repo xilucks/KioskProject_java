@@ -16,7 +16,17 @@ public class bucket extends JFrame {
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         c.add(new JLabel("장바구니"));
-        c.add(new JLabel(Menu.core));
+
+        for(int i=0; i<index.breadList.size(); i++) {
+            JPanel panel = new JPanel();
+            Bread now_bread = index.breadList.get(i);
+            panel.add(new JLabel("선택한 메뉴" + now_bread.getCore()));
+            panel.add(new JLabel("선택한 빵" + now_bread.getBread()));
+            panel.add(new JLabel("선택한 치즈" + now_bread.getCheese()));
+            panel.add(new JLabel());
+            c.add(panel);
+        }
+
         Button tmp = new Button("돌아가기");
 
         tmp.addActionListener(new ActionListener() {
@@ -27,12 +37,6 @@ public class bucket extends JFrame {
         });
         c.add(tmp);
 
-        for(int i=0; i<index.breadList.size(); i++) {
-            Bread now_bread = index.breadList.get(i);
-            c.add(new JLabel(now_bread.getCore()));
-
-
-        }
 
         setSize(500,1000);
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
@@ -40,7 +44,7 @@ public class bucket extends JFrame {
 
     }
     public static void main(String[] args) {
-        new bucket();
+        new index();
 
     }
 }
