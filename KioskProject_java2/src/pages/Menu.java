@@ -30,7 +30,7 @@ public class Menu extends JFrame {
     public static String bread = null;
     public static String cheese = null;
     public static ArrayList<String> vegetables = new ArrayList<>();
-    public static ArrayList<String> sources = new ArrayList<>();
+    public static ArrayList<String> sauces = new ArrayList<>();
     public static boolean set = false;
     public static int price = 0;
 
@@ -69,21 +69,8 @@ public class Menu extends JFrame {
 
         //현재 주문중인 상품
         int vegetableNum = vegetables.size();
-        int sourceNum = sources.size();
+        int sourceNum = sauces.size();
         boolean bolSet = set;
-        JLabel nowMenu = new JLabel("메뉴" + core);
-        JLabel nowBread = new JLabel("빵" + bread);
-        JLabel nowCheese = new JLabel("치즈" + cheese);
-        JLabel nowVegetables = new JLabel(vegetableNum + "개");
-        JLabel nowSources = new JLabel(sourceNum + "개");
-        JLabel nowSet = new JLabel("세트유무" + bolSet);
-
-        nowOrder.add(nowMenu);
-        nowOrder.add(nowBread);
-        nowOrder.add(nowCheese);
-        nowOrder.add(nowVegetables);
-        nowOrder.add(nowSources);
-        nowOrder.add(nowSet);
 
         //test data
         Button bucketButton = new Button("장바구니");
@@ -120,7 +107,7 @@ public class Menu extends JFrame {
         eggm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                core = "egg";
+                core = "에그마요";
                 new pages.Bread();
                 setVisible(false);
             }
@@ -128,7 +115,7 @@ public class Menu extends JFrame {
         itbmt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                core = "itbmt";
+                core = "이탈리안 비엠티";
                 new pages.Bread();
                 setVisible(false);
             }
@@ -136,7 +123,7 @@ public class Menu extends JFrame {
         lostchicken.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                core = "lostchicken";
+                core = "로스트 치킨";
                 new pages.Bread();
                 setVisible(false);
             }
@@ -144,7 +131,7 @@ public class Menu extends JFrame {
         meatmball.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                core = "meatball";
+                core = "미트볼";
                 new pages.Bread();
                 setVisible(false);
             }
@@ -154,7 +141,6 @@ public class Menu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new bucket();
-                new pages.Bread();
 
             }
         });

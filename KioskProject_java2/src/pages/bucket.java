@@ -44,7 +44,7 @@ public class bucket extends JFrame {
 
     }
     public static void main(String[] args) {
-        new index();
+        new bucket();
 
     }
 }

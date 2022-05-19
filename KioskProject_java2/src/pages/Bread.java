@@ -61,8 +61,9 @@ public class Bread extends JFrame {
         //test data
         c.add(header);
         c.add(menu);
-        c.add(bucketButton);
         c.add(nowBucket);
+        c.add(bucketButton);
+
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
@@ -74,28 +75,28 @@ public class Bread extends JFrame {
         Flat.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.bread = "egg";
+                Menu.bread = "플랫브래드";
                 new Cheese();
             }
         });
          Heaty.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 Menu.bread = "itbmt";
+                 Menu.bread = "하티";
                  new Cheese();
              }
          });
          wheat.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 Menu.bread = "lostchicken";
+                 Menu.bread = "위트";
                  new Cheese();
              }
          });
          white.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 Menu.bread = "meatball";
+                 Menu.bread = "화이트";
                  new Cheese();
              }
          });
