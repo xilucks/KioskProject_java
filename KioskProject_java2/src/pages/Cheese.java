@@ -14,6 +14,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static Component.Components.nowBucket;
+
 //나중에 메소드 따로 모아서 리팩토링 할 필요가 있을듯 코드 너무 지저분함
 public class Cheese extends JFrame {
 
@@ -43,10 +45,15 @@ public class Cheese extends JFrame {
         c.setLayout(new FlowLayout());
         header.add(new JLabel("빵을 골라주세요"));
 
+        //장바구니
+        JPanel nowBucket;
+        nowBucket = nowBucket();
+
         //test data
         c.add(header);
         c.add(menu);
         c.add(bucketButton);
+        c.add(nowBucket);
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
@@ -59,28 +66,28 @@ public class Cheese extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Menu.cheese = "american";
-                new vegetables();
+                new vegetable();
             }
         });
         mozzarella.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                         Menu.bread = "mozzarella";
-                new vegetables();
+                new vegetable();
                     }
         });
         shredded.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                         Menu.bread = "shredded";
-                new vegetables();
+                new vegetable();
                     }
         });
         none.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                         Menu.bread = "none";
-                new vegetables();
+                new vegetable();
                     }
         });
 
@@ -88,7 +95,7 @@ public class Cheese extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new bucket();
-                new vegetables();
+                new vegetable();
                 setVisible(false);
             }
         });

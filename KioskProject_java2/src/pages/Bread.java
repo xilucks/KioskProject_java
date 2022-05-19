@@ -15,6 +15,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import static Component.Components.nowBucket;
 import static pages.index.breadList;
 
 public class Bread extends JFrame {
@@ -53,10 +54,15 @@ public class Bread extends JFrame {
         c.setLayout(new FlowLayout());
         header.add(new JLabel("빵을 골라주세요"));
 
+        //장바구니
+        JPanel nowBucket;
+        nowBucket = nowBucket();
+
         //test data
         c.add(header);
         c.add(menu);
         c.add(bucketButton);
+        c.add(nowBucket);
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;

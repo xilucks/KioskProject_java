@@ -20,8 +20,6 @@ public class index extends JFrame {
         JPanel buttons = new JPanel();
 
 
-
-
         //graphic
         setTitle("시작하기");
         Container c = getContentPane();
