@@ -20,9 +20,9 @@ public class bucket extends JFrame {
         for(int i=0; i<index.breadList.size(); i++) {
             JPanel panel = new JPanel();
             Bread now_bread = index.breadList.get(i);
-            panel.add(new JLabel("선택한 메뉴" + now_bread.getCore()));
-            panel.add(new JLabel("선택한 빵" + now_bread.getBread()));
-            panel.add(new JLabel("선택한 치즈" + now_bread.getCheese()));
+            panel.add(new JLabel("<html> 선택한 메뉴" + now_bread.getCore()+"<br></html>"));
+            panel.add(new JLabel("<html> 선택한 빵" + now_bread.getBread()+"<br></html>"));
+            panel.add(new JLabel("<html> 선택한 치즈" + now_bread.getCheese()+"<br></html>"));
             panel.add(new JLabel());
             c.add(panel);
         }
@@ -38,7 +38,7 @@ public class bucket extends JFrame {
         c.add(tmp);
 
 
-        setSize(500,1000);
+        setSize(400,600);
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
         setVisible(true);
 
