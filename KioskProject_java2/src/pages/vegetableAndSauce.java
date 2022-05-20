@@ -22,6 +22,7 @@ public class vegetableAndSauce extends JFrame {
 
         //Container Setting
         Container c = getContentPane();
+        c.setBackground(new Color(50,100,100));
         c.setLayout(new FlowLayout());
         setTitle("야채와 소스를 골라주세요");
 
@@ -38,22 +39,37 @@ public class vegetableAndSauce extends JFrame {
         JCheckBox lettuce = new JCheckBox("양상추");
         JCheckBox olive = new JCheckBox("올리브");
         JCheckBox tomato = new JCheckBox("토마토");
+        JCheckBox pickle = new JCheckBox("피클");
+        JCheckBox onion= new JCheckBox("양파");
+
+
 
         vegetablesPanel.add(cucumber);
         vegetablesPanel.add(lettuce);
         vegetablesPanel.add(olive);
         vegetablesPanel.add(tomato);
+        vegetablesPanel.add(pickle);
+        vegetablesPanel.add(onion);
 
         //vegetablesPanel 수정
         JCheckBox hotChilli = new JCheckBox("핫칠리");
         JCheckBox mustard = new JCheckBox("머스타드");
         JCheckBox dressing = new JCheckBox("이탈리안 드레싱");
         JCheckBox sweatOnion = new JCheckBox("스위트 어니언");
+        JCheckBox sweetchilly = new JCheckBox("스위트 칠리");
+        JCheckBox smokebbq = new JCheckBox("스모크 바베큐");
+        JCheckBox salt = new JCheckBox("소금");
+        JCheckBox pepper = new JCheckBox("후추");
+
 
         saucePanel.add(hotChilli);
         saucePanel.add(mustard);
         saucePanel.add(dressing);
         saucePanel.add(sweatOnion);
+        saucePanel.add(sweetchilly);
+        saucePanel.add(smokebbq);
+        saucePanel.add(salt);
+        saucePanel.add(pepper);
 
 
         //컴포넌트 디자인
@@ -68,7 +84,7 @@ public class vegetableAndSauce extends JFrame {
 
         //submit 액션
         submit.addActionListener(new ActionListener() {
-            boolean[] tmpVegetableArr = new boolean[4];
+            boolean[] tmpVegetableArr = new boolean[8];
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -86,6 +102,12 @@ public class vegetableAndSauce extends JFrame {
                 if(tomato.isSelected()){
                     vegetables.add("토마토");
                 }
+                if(pickle.isSelected()){
+                    vegetables.add("피클");
+                }
+                if(onion.isSelected()){
+                    vegetables.add("양파");
+                }
 
                 //소스 선택
                 if(hotChilli.isSelected()){
@@ -100,6 +122,18 @@ public class vegetableAndSauce extends JFrame {
                 if(sweatOnion.isSelected()){
                     sauces.add("스위트 어니언");
                 }
+                if(sweetchilly.isSelected()){
+                    sauces.add("스위트 칠리");
+                }
+                if(smokebbq.isSelected()){
+                    sauces.add("스모크 바베큐");
+               }
+                if(salt.isSelected()){
+                    sauces.add("소금");
+                }
+                if(pepper.isSelected()){
+                    sauces.add("후추");
+                }
 
                 new set();
             }
@@ -110,7 +144,7 @@ public class vegetableAndSauce extends JFrame {
 
 
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        setSize(500, 1000);
+        setSize(800, 600);
         setVisible(true);
     }
 

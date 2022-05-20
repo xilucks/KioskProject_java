@@ -43,7 +43,8 @@ public class Cheese extends JFrame {
         //Container Setting
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
-        header.add(new JLabel("빵을 골라주세요"));
+        c.setBackground(new Color(50,100,100));
+        header.add(new JLabel("치즈를 골라주세요"));
 
         //장바구니
         JPanel nowBucket;
@@ -52,12 +53,13 @@ public class Cheese extends JFrame {
         //test data
         c.add(header);
         c.add(menu);
-        c.add(bucketButton);
         c.add(nowBucket);
+        c.add(bucketButton);
+
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        setSize(600,800);
+        setSize(800,600);
         setVisible(true);
 
         //eventListener
@@ -65,29 +67,29 @@ public class Cheese extends JFrame {
         american.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.cheese = "american";
-                new vegetable();
+                Menu.cheese = "아메리칸 치즈";
+                new vegetableAndSauce();
             }
         });
         mozzarella.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                        Menu.bread = "mozzarella";
-                new vegetable();
-                    }
+                Menu.cheese = "모짜렐라 치즈";
+                new vegetableAndSauce();
+            }
         });
         shredded.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                        Menu.bread = "shredded";
-                new vegetable();
+                Menu.cheese = "슈레드 치즈";
+                new vegetableAndSauce();
                     }
         });
         none.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                        Menu.bread = "none";
-                new vegetable();
+                Menu.cheese = "없음";
+                new vegetableAndSauce();
                     }
         });
 
@@ -95,7 +97,7 @@ public class Cheese extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new bucket();
-                new vegetable();
+                new vegetableAndSauce();
                 setVisible(false);
             }
         });
