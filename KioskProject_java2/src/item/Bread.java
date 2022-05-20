@@ -41,12 +41,12 @@ public class Bread {
         this.vegetables = vegetables;
     }
 
-    public ArrayList<String> getSauce() {
-        return sauce;
+    public ArrayList<String> getSource() {
+        return Source;
     }
 
-    public void setSauce(ArrayList<String> source) {
-        sauce = source;
+    public void setSource(ArrayList<String> source) {
+        Source = source;
     }
 
     public boolean isSet() {
@@ -58,16 +58,16 @@ public class Bread {
     }
 
     ArrayList<String> vegetables;
-    ArrayList<String> sauce;
+    ArrayList<String> Source;
 
     boolean set;
 
-    public Bread(String core, String bread, String cheese, ArrayList<String> vegetables, ArrayList<String> sauce, boolean set, int price) {
+    public Bread(String core, String bread, String cheese, ArrayList<String> vegetables, ArrayList<String> source, boolean set, int price) {
         this.core = core;
         this.bread = bread;
         this.cheese = cheese;
         this.vegetables = vegetables;
-        this.sauce = sauce;
+        this.Source = source;
         this.set = set;
         this.price = price;
     }

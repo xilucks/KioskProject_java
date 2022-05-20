@@ -37,10 +37,10 @@ public class Bread extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton Flat = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/bread/Flat.jpeg"));
-        JButton Heaty = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/bread/Heaty.jpeg"));
-        JButton wheat = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/bread/wheat.jpeg"));
-        JButton white = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/bread/white.jpeg"));
+        JButton Flat = new JButton(resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\Flat.jpeg"));
+        JButton Heaty = new JButton(resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\Heaty.jpeg"));
+        JButton wheat = new JButton(resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\wheat.jpeg"));
+        JButton white = new JButton(resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\white.jpeg"));
         Button bucketButton = new Button("장바구니");
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2,2));
@@ -61,13 +61,12 @@ public class Bread extends JFrame {
         //test data
         c.add(header);
         c.add(menu);
-        c.add(nowBucket);
         c.add(bucketButton);
-
+        c.add(nowBucket);
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        setSize(500,1000);
+        setSize(600,800);
         setVisible(true);
 
         //eventListener
@@ -75,28 +74,28 @@ public class Bread extends JFrame {
         Flat.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.bread = "플랫브래드";
+                Menu.bread = "egg";
                 new Cheese();
             }
         });
          Heaty.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 Menu.bread = "하티";
+                 Menu.bread = "itbmt";
                  new Cheese();
              }
          });
          wheat.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 Menu.bread = "위트";
+                 Menu.bread = "lostchicken";
                  new Cheese();
              }
          });
          white.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 Menu.bread = "화이트";
+                 Menu.bread = "meatball";
                  new Cheese();
              }
          });

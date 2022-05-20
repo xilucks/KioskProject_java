@@ -30,7 +30,7 @@ public class Menu extends JFrame {
     public static String bread = null;
     public static String cheese = null;
     public static ArrayList<String> vegetables = new ArrayList<>();
-    public static ArrayList<String> sauces = new ArrayList<>();
+    public static ArrayList<String> sources = new ArrayList<>();
     public static boolean set = false;
     public static int price = 0;
 
@@ -54,10 +54,10 @@ public class Menu extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton eggm = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/menu/eggm.png"));
-        JButton itbmt = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/menu/itbmt.png"));
-        JButton lostchicken = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/menu/lostchicken.png"));
-        JButton meatmball = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/menu/meatball.png"));
+        JButton eggm = new JButton(resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\menu\\eggm.png"));
+        JButton itbmt = new JButton(resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\menu\\itbmt.png"));
+        JButton lostchicken = new JButton(resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\menu\\lostchicken.png"));
+        JButton meatmball = new JButton(resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\menu\\meatball.png"));
         JPanel nowOrder = new JPanel();
 
         //메뉴판 제작
@@ -69,8 +69,21 @@ public class Menu extends JFrame {
 
         //현재 주문중인 상품
         int vegetableNum = vegetables.size();
-        int sourceNum = sauces.size();
+        int sourceNum = sources.size();
         boolean bolSet = set;
+        JLabel nowMenu = new JLabel("메뉴" + core);
+        JLabel nowBread = new JLabel("빵" + bread);
+        JLabel nowCheese = new JLabel("치즈" + cheese);
+        JLabel nowVegetables = new JLabel(vegetableNum + "개");
+        JLabel nowSources = new JLabel(sourceNum + "개");
+        JLabel nowSet = new JLabel("세트유무" + bolSet);
+
+        nowOrder.add(nowMenu);
+        nowOrder.add(nowBread);
+        nowOrder.add(nowCheese);
+        nowOrder.add(nowVegetables);
+        nowOrder.add(nowSources);
+        nowOrder.add(nowSet);
 
         //test data
         Button bucketButton = new Button("장바구니");
@@ -92,7 +105,7 @@ public class Menu extends JFrame {
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        setSize(500, 1000);
+        setSize(600, 800);
         setVisible(true);
 
         //eventListener
@@ -107,7 +120,7 @@ public class Menu extends JFrame {
         eggm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                core = "에그마요";
+                core = "egg";
                 new pages.Bread();
                 setVisible(false);
             }
@@ -115,7 +128,7 @@ public class Menu extends JFrame {
         itbmt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                core = "이탈리안 비엠티";
+                core = "itbmt";
                 new pages.Bread();
                 setVisible(false);
             }
@@ -123,7 +136,7 @@ public class Menu extends JFrame {
         lostchicken.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                core = "로스트 치킨";
+                core = "lostchicken";
                 new pages.Bread();
                 setVisible(false);
             }
@@ -131,7 +144,7 @@ public class Menu extends JFrame {
         meatmball.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                core = "미트볼";
+                core = "meatball";
                 new pages.Bread();
                 setVisible(false);
             }
@@ -141,6 +154,7 @@ public class Menu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new bucket();
+                new pages.Bread();
 
             }
         });

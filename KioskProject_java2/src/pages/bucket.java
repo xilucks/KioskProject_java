@@ -38,13 +38,13 @@ public class bucket extends JFrame {
         c.add(tmp);
 
 
-        setSize(500,1000);
+        setSize(600,800);
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
         setVisible(true);
 
     }
     public static void main(String[] args) {
-        new bucket();
+        new index();
 
     }
 }

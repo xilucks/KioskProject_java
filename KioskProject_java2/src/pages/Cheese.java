@@ -28,10 +28,10 @@ public class Cheese extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton american = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/americanCheese.jpeg"));
-        JButton mozzarella = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/MozzarellaCheese.jpeg"));
-        JButton shredded = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/shreddedCheese.jpeg"));
-        JButton none = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/X.png"));
+        JButton american = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\americanCheese.jpeg"));
+        JButton mozzarella = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\MozzarellaCheese.jpeg"));
+        JButton shredded = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\shreddedCheese.jpeg"));
+        JButton none = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\X.png"));
         Button bucketButton = new Button("장바구니");
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2,2));
@@ -43,7 +43,7 @@ public class Cheese extends JFrame {
         //Container Setting
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
-        header.add(new JLabel("치즈를 골라주세요"));
+        header.add(new JLabel("빵을 골라주세요"));
 
         //장바구니
         JPanel nowBucket;
@@ -52,13 +52,12 @@ public class Cheese extends JFrame {
         //test data
         c.add(header);
         c.add(menu);
-        c.add(nowBucket);
         c.add(bucketButton);
-
+        c.add(nowBucket);
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        setSize(500,1000);
+        setSize(600,800);
         setVisible(true);
 
         //eventListener
@@ -66,29 +65,29 @@ public class Cheese extends JFrame {
         american.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.cheese = "아메리칸 치즈";
-                new vegetableAndSauce();
+                Menu.cheese = "american";
+                new vegetable();
             }
         });
         mozzarella.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.cheese = "모짜렐라 치즈";
-                new vegetableAndSauce();
-            }
+                        Menu.bread = "mozzarella";
+                new vegetable();
+                    }
         });
         shredded.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.cheese = "슈레드 치즈";
-                new vegetableAndSauce();
+                        Menu.bread = "shredded";
+                new vegetable();
                     }
         });
         none.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Menu.cheese = "없음";
-                new vegetableAndSauce();
+                        Menu.bread = "none";
+                new vegetable();
                     }
         });
 
@@ -96,7 +95,7 @@ public class Cheese extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new bucket();
-                new vegetableAndSauce();
+                new vegetable();
                 setVisible(false);
             }
         });
