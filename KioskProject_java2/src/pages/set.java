@@ -13,7 +13,7 @@ public class set extends JFrame {
 
     public set(){
         Container c = getContentPane();
-        c.setBackground(new Color(50,100,100));
+        c.setBackground(new Color(238,238,238));
         c.setLayout(new FlowLayout());
         setTitle("세트 여부를 선택해주세요");
         JPanel nowBucket;

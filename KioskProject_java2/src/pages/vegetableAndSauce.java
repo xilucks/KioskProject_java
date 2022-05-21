@@ -22,7 +22,7 @@ public class vegetableAndSauce extends JFrame {
 
         //Container Setting
         Container c = getContentPane();
-        c.setBackground(new Color(50,100,100));
+        c.setBackground(new Color(238,238,238));
         c.setLayout(new FlowLayout());
         setTitle("야채와 소스를 골라주세요");
 

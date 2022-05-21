@@ -43,7 +43,7 @@ public class Cheese extends JFrame {
         //Container Setting
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
-        c.setBackground(new Color(50,100,100));
+        c.setBackground(new Color(238,238,238));
         header.add(new JLabel("치즈를 골라주세요"));
 
         //장바구니

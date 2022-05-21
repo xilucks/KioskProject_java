@@ -15,7 +15,7 @@ public class orderCheck extends JFrame {
         setSize(800,600);
 
         Container c = getContentPane();
-        c.setBackground(new Color(0,145,100));
+        c.setBackground(new Color(238,238,238));
         c.setLayout(new FlowLayout());
 
 

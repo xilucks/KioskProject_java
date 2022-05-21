@@ -78,7 +78,7 @@ public class Menu extends JFrame {
 
         //Container Setting
         Container c = getContentPane();
-        c.setBackground(new Color(50,100,100));
+        c.setBackground(new Color(238,238,238));
         c.setLayout(new FlowLayout());
         header.add(new JLabel("메인페이지"));
 
