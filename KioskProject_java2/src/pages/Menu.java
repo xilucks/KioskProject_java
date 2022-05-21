@@ -54,10 +54,10 @@ public class Menu extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton eggm = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/menu/eggm.png"));
-        JButton itbmt = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/menu/itbmt.png"));
-        JButton lostchicken = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/menu/lostchicken.png"));
-        JButton meatmball = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/menu/meatball.png"));
+        JButton eggm = new JButton(resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/eggm.png"));
+        JButton itbmt = new JButton(resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/itbmt.png"));
+        JButton lostchicken = new JButton(resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/lostchicken.png"));
+        JButton meatmball = new JButton(resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/meatball.png"));
         JPanel nowOrder = new JPanel();
 
         //메뉴판 제작
@@ -78,6 +78,7 @@ public class Menu extends JFrame {
 
         //Container Setting
         Container c = getContentPane();
+        c.setBackground(new Color(50,100,100));
         c.setLayout(new FlowLayout());
         header.add(new JLabel("메인페이지"));
 
@@ -92,7 +93,7 @@ public class Menu extends JFrame {
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        setSize(500, 1000);
+        setSize(800, 600);
         setVisible(true);
 
         //eventListener
@@ -108,6 +109,7 @@ public class Menu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 core = "에그마요";
+                price = 4500;
                 new pages.Bread();
                 setVisible(false);
             }
@@ -116,6 +118,7 @@ public class Menu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 core = "이탈리안 비엠티";
+                price = 5400;
                 new pages.Bread();
                 setVisible(false);
             }
@@ -124,6 +127,7 @@ public class Menu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 core = "로스트 치킨";
+                price = 6100;
                 new pages.Bread();
                 setVisible(false);
             }
@@ -132,6 +136,7 @@ public class Menu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 core = "미트볼";
+                price = 6500;
                 new pages.Bread();
                 setVisible(false);
             }

@@ -28,10 +28,10 @@ public class Cheese extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton american = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/americanCheese.jpeg"));
-        JButton mozzarella = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/MozzarellaCheese.jpeg"));
-        JButton shredded = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/shreddedCheese.jpeg"));
-        JButton none = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/X.png"));
+        JButton american = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\americanCheese.jpeg"));
+        JButton mozzarella = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\MozzarellaCheese.jpeg"));
+        JButton shredded = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\shreddedCheese.jpeg"));
+        JButton none = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\X.png"));
         Button bucketButton = new Button("장바구니");
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2,2));
@@ -43,6 +43,7 @@ public class Cheese extends JFrame {
         //Container Setting
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
+        c.setBackground(new Color(50,100,100));
         header.add(new JLabel("치즈를 골라주세요"));
 
         //장바구니
@@ -58,7 +59,7 @@ public class Cheese extends JFrame {
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        setSize(500,1000);
+        setSize(800,600);
         setVisible(true);
 
         //eventListener
