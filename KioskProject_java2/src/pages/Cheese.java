@@ -28,11 +28,12 @@ public class Cheese extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton american = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\americanCheese.jpeg"));
-        JButton mozzarella = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\MozzarellaCheese.jpeg"));
-        JButton shredded = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\shreddedCheese.jpeg"));
-        JButton none = new JButton(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\X.png"));
+        JButton american = new JButton("아메리칸 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\americanCheese.jpeg"));
+        JButton mozzarella = new JButton("모짜렐라 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\MozzarellaCheese.jpeg"));
+        JButton shredded = new JButton("슈레드 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\shreddedCheese.jpeg"));
+        JButton none = new JButton("치즈 선택안함", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\X.png"));
         Button bucketButton = new Button("장바구니");
+
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2,2));
         menu.add(american);
@@ -45,6 +46,10 @@ public class Cheese extends JFrame {
         c.setLayout(new FlowLayout());
         c.setBackground(new Color(238,238,238));
         header.add(new JLabel("치즈를 골라주세요"));
+
+        //폰트
+        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
+        c.setFont(font1);
 
         //장바구니
         JPanel nowBucket;

@@ -26,6 +26,10 @@ public class vegetableAndSauce extends JFrame {
         c.setLayout(new FlowLayout());
         setTitle("야채와 소스를 골라주세요");
 
+        //폰트
+        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
+        c.setFont(font1);
+
 
 
         //컴포넌트 생성

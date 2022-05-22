@@ -39,7 +39,7 @@ public class Menu extends JFrame {
     public static ImageIcon resize(String path){
         ImageIcon icon = new ImageIcon(path);
         Image img = icon.getImage();
-        Image reSizeImg = img.getScaledInstance(200,100,Image.SCALE_SMOOTH);
+        Image reSizeImg = img.getScaledInstance(250,200,Image.SCALE_SMOOTH);
         ImageIcon changeIcon = new ImageIcon(reSizeImg);
 
         return changeIcon;
@@ -54,10 +54,10 @@ public class Menu extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton eggm = new JButton(resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/eggm.png"));
-        JButton itbmt = new JButton(resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/itbmt.png"));
-        JButton lostchicken = new JButton(resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/lostchicken.png"));
-        JButton meatmball = new JButton(resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/meatball.png"));
+        JButton eggm = new JButton("<html> 에그마요 <br> 4500원 </html>", resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/eggm.png"));
+        JButton itbmt = new JButton("<html> 이탈리안 BMT <br> 5400원 </html>", resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/itbmt.png"));
+        JButton lostchicken = new JButton("<html> 로스트 치킨 <br> 6100원 </html>", resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/lostchicken.png"));
+        JButton meatmball = new JButton("<html> 미트볼 <br> 6500원 </html>", resize("/Users/HONG SEO I/Desktop/project/2022/Kiosk_project/KioskProject_java2/image/menu/meatball.png"));
         JPanel nowOrder = new JPanel();
 
         //메뉴판 제작
@@ -80,11 +80,17 @@ public class Menu extends JFrame {
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
         c.setLayout(new FlowLayout());
-        header.add(new JLabel("메인페이지"));
+
+        //폰트
+        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
+        c.setFont(font1);
+
+        header.add(new JLabel("메뉴를 선택해주세요."));
 
         //test data
         JPanel nowBucket;
         nowBucket = nowBucket();
+
         c.add(header);
         c.add(menu);
         c.add(nowBucket);

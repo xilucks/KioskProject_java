@@ -13,7 +13,7 @@ public class index extends JFrame {
     public index(){
 
         //라벨 및 폰트
-        Font font1 = new Font("맑은 고딕",Font.BOLD, 40);
+        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
 
 
         //set Component
@@ -30,12 +30,13 @@ public class index extends JFrame {
         c.setBackground(new Color(238,238,238));
         start.setFont(font1);
         close.setFont(font1);
+        c.setFont(font1);
 
         c.setLayout(new FlowLayout(FlowLayout.CENTER, 500, 50));
         logoArea.add(logo);
         buttons.add(start);
         buttons.add(close);
-        c.add(logoArea, BorderLayout.NORTH);
+        c.add(logoArea, BorderLayout.CENTER);
         c.add(buttons, BorderLayout.SOUTH);
 
 
