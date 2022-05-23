@@ -37,11 +37,12 @@ public class Bread extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton Flat = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/bread/Flat.jpeg"));
-        JButton Heaty = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/bread/Heaty.jpeg"));
-        JButton wheat = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/bread/wheat.jpeg"));
-        JButton white = new JButton(resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/bread/white.jpeg"));
+        JButton Flat = new JButton("플랫브레드", resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\Flat.jpeg"));
+        JButton Heaty = new JButton("하티", resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\Heaty.jpeg"));
+        JButton wheat = new JButton("위트", resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\wheat.jpeg"));
+        JButton white = new JButton("화이트", resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\white.jpeg"));
         Button bucketButton = new Button("장바구니");
+        
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2,2));
         menu.add(Flat);
@@ -52,7 +53,12 @@ public class Bread extends JFrame {
         //Container Setting
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
+        menu.setPreferredSize(new Dimension(600,500));
+        c.setBackground(new Color(238,238,238));
         header.add(new JLabel("빵을 골라주세요"));
+
+        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
+        c.setFont(font1);
 
         //장바구니
         JPanel nowBucket;
@@ -67,8 +73,9 @@ public class Bread extends JFrame {
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        setSize(500,1000);
+        setSize(800,600);
         setVisible(true);
+
 
         //eventListener
 

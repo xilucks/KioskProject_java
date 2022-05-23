@@ -28,11 +28,12 @@ public class Cheese extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton american = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/americanCheese.jpeg"));
-        JButton mozzarella = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/MozzarellaCheese.jpeg"));
-        JButton shredded = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/shreddedCheese.jpeg"));
-        JButton none = new JButton(Menu.resize("/Users/choisiun/Desktop/Programming/KioskProject_java/KioskProject_java2/image/cheese/X.png"));
+        JButton american = new JButton("아메리칸 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\americanCheese.jpeg"));
+        JButton mozzarella = new JButton("모짜렐라 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\MozzarellaCheese.jpeg"));
+        JButton shredded = new JButton("슈레드 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\shreddedCheese.jpeg"));
+        JButton none = new JButton("치즈 선택안함", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\X.png"));
         Button bucketButton = new Button("장바구니");
+
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2,2));
         menu.add(american);
@@ -43,7 +44,12 @@ public class Cheese extends JFrame {
         //Container Setting
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
+        c.setBackground(new Color(238,238,238));
         header.add(new JLabel("치즈를 골라주세요"));
+
+        //폰트
+        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
+        c.setFont(font1);
 
         //장바구니
         JPanel nowBucket;
@@ -58,7 +64,7 @@ public class Cheese extends JFrame {
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        setSize(500,1000);
+        setSize(800,600);
         setVisible(true);
 
         //eventListener
