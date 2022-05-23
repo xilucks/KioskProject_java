@@ -8,6 +8,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import static Component.Components.nowBucket;
+import static pages.Menu.*;
+import static pages.Menu.set;
+import static pages.index.breadList;
 
 public class set extends JFrame {
 
@@ -58,6 +61,8 @@ public class set extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Menu.set = true;
                 Menu.price += 1500;
+                Bread bread = new Bread(core, Menu.bread, cheese, vegetables, sauces, set, Menu.price);
+                breadList.add(bread);
                 new orderCheck();
                 setVisible(false);
             }
@@ -66,7 +71,10 @@ public class set extends JFrame {
         single.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 Menu.set = false;
+                Bread bread = new Bread(core, Menu.bread, cheese, vegetables, sauces, set, Menu.price);
+                breadList.add(bread);
                 new orderCheck();
                 setVisible(false);
 

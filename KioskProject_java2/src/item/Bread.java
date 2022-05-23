@@ -49,7 +49,7 @@ public class Bread {
         sauce = source;
     }
 
-    public boolean isSet() {
+    public boolean getSet() {
         return set;
     }
 
@@ -60,7 +60,7 @@ public class Bread {
     ArrayList<String> vegetables;
     ArrayList<String> sauce;
 
-    boolean set;
+    private boolean set;
 
     public Bread(String core, String bread, String cheese, ArrayList<String> vegetables, ArrayList<String> sauce, boolean set, int price) {
         this.core = core;

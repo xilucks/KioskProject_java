@@ -28,6 +28,9 @@ public class bucket extends JFrame {
             panel.add(new JLabel("<html><br> 선택한 메뉴" + now_bread.getCore()+"<br></html>"));
             panel.add(new JLabel("<html><br> 선택한 빵" + now_bread.getBread()+"<br></html>"));
             panel.add(new JLabel("<html><br> 선택한 치즈" + now_bread.getCheese()+"<br></html>"));
+            panel.add(new JLabel("<html><br> 선택한 야채" + now_bread.getVegetables().size()+"개 <br></html>"));
+            panel.add(new JLabel("<html><br> 선택한 소스" + now_bread.getSauce().size()+"개 <br></html>"));
+            panel.add(new JLabel("<html><br> 세트 여부" + now_bread.getSet()+"<br></html>"));
             panel.add(new JLabel());
             c.add(panel);
         }
