@@ -28,10 +28,10 @@ public class Cheese extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton american = new JButton("아메리칸 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\americanCheese.jpeg"));
-        JButton mozzarella = new JButton("모짜렐라 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\MozzarellaCheese.jpeg"));
-        JButton shredded = new JButton("슈레드 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\shreddedCheese.jpeg"));
-        JButton none = new JButton("치즈 선택안함", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\X.png"));
+        JButton american = new JButton("아메리칸 치즈", Menu.resize("KioskProject_java2/image/cheese/americanCheese.jpeg"));
+        JButton mozzarella = new JButton("모짜렐라 치즈", Menu.resize("KioskProject_java2/image/cheese/MozzarellaCheese.jpeg"));
+        JButton shredded = new JButton("슈레드 치즈", Menu.resize("KioskProject_java2/image/cheese/shreddedCheese.jpeg"));
+        JButton none = new JButton("치즈 선택안함", Menu.resize("KioskProject_java2/image/cheese/X.png"));
         Button bucketButton = new Button("장바구니");
 
         //메뉴판 제작
