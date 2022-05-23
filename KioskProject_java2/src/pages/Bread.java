@@ -34,13 +34,17 @@ public class Bread extends JFrame {
         //        item1.setPreferredSize(new Dimension(300, 50)); //버튼 크기 조절
         //setTitle
         setTitle("메인 메뉴");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         //Component Setting
         JPanel header = new JPanel();
         JButton Flat = new JButton("플랫브레드", resize("KioskProject_java2/image/bread/Flat.jpeg"));
+
         JButton Heaty = new JButton("하티", resize("KioskProject_java2/image/bread/Heaty.jpeg"));
         JButton wheat = new JButton("위트", resize("KioskProject_java2/image/bread/wheat.jpeg"));
         JButton white = new JButton("화이트", resize("KioskProject_java2/image/bread/white.jpeg"));
+
         Button bucketButton = new Button("장바구니");
         
         //메뉴판 제작
@@ -84,6 +88,8 @@ public class Bread extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Menu.bread = "플랫브래드";
                 new Cheese();
+                setVisible(false);
+
             }
         });
          Heaty.addActionListener(new ActionListener() {
@@ -91,6 +97,8 @@ public class Bread extends JFrame {
              public void actionPerformed(ActionEvent e) {
                  Menu.bread = "하티";
                  new Cheese();
+                 setVisible(false);
+
              }
          });
          wheat.addActionListener(new ActionListener() {
@@ -98,6 +106,8 @@ public class Bread extends JFrame {
              public void actionPerformed(ActionEvent e) {
                  Menu.bread = "위트";
                  new Cheese();
+                 setVisible(false);
+
              }
          });
          white.addActionListener(new ActionListener() {
@@ -105,6 +115,8 @@ public class Bread extends JFrame {
              public void actionPerformed(ActionEvent e) {
                  Menu.bread = "화이트";
                  new Cheese();
+                 setVisible(false);
+
              }
          });
 
@@ -112,7 +124,6 @@ public class Bread extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new bucket();
-                setVisible(false);
             }
         });
 

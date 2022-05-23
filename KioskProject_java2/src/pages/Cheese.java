@@ -25,6 +25,7 @@ public class Cheese extends JFrame {
         //        item1.setPreferredSize(new Dimension(300, 50)); //버튼 크기 조절
         //setTitle
         setTitle("메인 메뉴");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Component Setting
         JPanel header = new JPanel();
@@ -74,6 +75,8 @@ public class Cheese extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Menu.cheese = "아메리칸 치즈";
                 new vegetableAndSauce();
+                setVisible(false);
+
             }
         });
         mozzarella.addActionListener(new ActionListener() {
@@ -81,6 +84,8 @@ public class Cheese extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Menu.cheese = "모짜렐라 치즈";
                 new vegetableAndSauce();
+                setVisible(false);
+
             }
         });
         shredded.addActionListener(new ActionListener() {
@@ -88,14 +93,18 @@ public class Cheese extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Menu.cheese = "슈레드 치즈";
                 new vegetableAndSauce();
-                    }
+                setVisible(false);
+
+            }
         });
         none.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Menu.cheese = "없음";
                 new vegetableAndSauce();
-                    }
+                setVisible(false);
+
+            }
         });
 
         bucketButton.addActionListener(new ActionListener() {
@@ -103,7 +112,6 @@ public class Cheese extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 new bucket();
                 new vegetableAndSauce();
-                setVisible(false);
             }
         });
 

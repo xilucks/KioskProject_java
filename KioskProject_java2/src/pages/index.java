@@ -26,6 +26,8 @@ public class index extends JFrame {
 
         //graphic
         setTitle("시작하기");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
         start.setFont(font1);

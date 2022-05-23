@@ -16,6 +16,8 @@ public class set extends JFrame {
         c.setBackground(new Color(238,238,238));
         c.setLayout(new GridLayout(3,1));
         setTitle("세트 여부를 선택해주세요");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         //폰트
         Font font1 = new Font("맑은고딕",Font.BOLD, 40);
@@ -26,8 +28,8 @@ public class set extends JFrame {
 
 
         //단픔, 세트 jbutton
-        Button pickset = new Button("세트메뉴 선택");
-        Button single = new Button("이대로 결제하기");
+        Button pickset = new Button("세트(+1500원)");
+        Button single = new Button("단품");
 
         JPanel buttonz = new JPanel();
         buttonz.add(single);
@@ -57,6 +59,7 @@ public class set extends JFrame {
                 Menu.set = true;
                 Menu.price += 1500;
                 new orderCheck();
+                setVisible(false);
             }
         });
 
@@ -65,6 +68,8 @@ public class set extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Menu.set = false;
                 new orderCheck();
+                setVisible(false);
+
             }
         });
 
