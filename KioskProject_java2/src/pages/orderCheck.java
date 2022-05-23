@@ -24,9 +24,10 @@ public class orderCheck extends JFrame {
         nowBucket = nowBucket();
 
         //폰트
-        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
+        Font font1 = new Font("맑은고딕",Font.BOLD, 20);
         c.setFont(font1);
 
+        JLabel order = new JLabel("<html><br> 주문 내역 <br></html>");
         JLabel price = new JLabel("<html><br> 총 결제 비용: " + String.valueOf(Menu.price)+"원<br><html>");
         JLabel text = new JLabel("이대로 결제 하시겠습니까?");
         JButton confirm = new JButton("이대로 결제");
@@ -34,7 +35,9 @@ public class orderCheck extends JFrame {
 
         price.setFont(font1);
         text.setFont(font1);
+        order.setFont(font1);
 
+        c.add(order);
         c.add(nowBucket);
         c.add(price);
         c.add(text);

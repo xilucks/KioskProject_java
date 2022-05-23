@@ -32,6 +32,8 @@ public class bucket extends JFrame {
             c.add(panel);
         }
 
+        //장바구니 추가
+
         Button tmp = new Button("돌아가기");
 
 

@@ -19,7 +19,6 @@ public class set extends JFrame {
 
         //폰트
         Font font1 = new Font("맑은고딕",Font.BOLD, 40);
-        c.setFont(font1);
 
         JPanel nowBucket;
         nowBucket = nowBucket();
@@ -39,9 +38,9 @@ public class set extends JFrame {
         header.add(new JLabel("<html><br><br><br> 세트메뉴를 선택하시겠습니까? </html>"));
 
         //font
+        header.setFont(font1);
         pickset.setFont(font1);
         single.setFont(font1);
-        header.setFont(font1);
 
         c.add(header);
         c.add(buttonz, new FlowLayout());

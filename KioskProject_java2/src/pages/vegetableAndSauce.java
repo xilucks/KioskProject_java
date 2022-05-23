@@ -38,6 +38,7 @@ public class vegetableAndSauce extends JFrame {
         JButton submit = new JButton("확인");
         JPanel nowBucket = nowBucket();
 
+
             //vegetablesPanel 수정
         JCheckBox cucumber = new JCheckBox("오이");
         JCheckBox lettuce = new JCheckBox("양상추");
@@ -75,7 +76,7 @@ public class vegetableAndSauce extends JFrame {
 
         //컴포넌트 디자인
         vegetablesPanel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "야채종류" ,TitledBorder.LEADING,TitledBorder.TOP,null,new Color(0,0,0)));
-        saucePanel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "야채종류" ,TitledBorder.LEADING,TitledBorder.TOP,null,new Color(0,0,0)));
+        saucePanel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "소스종류" ,TitledBorder.LEADING,TitledBorder.TOP,null,new Color(0,0,0)));
 
         //컴포넌트 추가
         c.add(vegetablesPanel);
