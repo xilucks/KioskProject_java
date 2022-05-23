@@ -13,10 +13,12 @@ public class orderCheck extends JFrame {
     public orderCheck(){
         setTitle("주문 내역 확인");
         setSize(800,600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
-        c.setLayout(new GridLayout(5,1));
+        c.setLayout(new GridLayout(6,1));
 
 
         JPanel check = new JPanel();
@@ -30,8 +32,8 @@ public class orderCheck extends JFrame {
         JLabel order = new JLabel("<html><br> 주문 내역 <br></html>");
         JLabel price = new JLabel("<html><br> 총 결제 비용: " + String.valueOf(Menu.price)+"원<br><html>");
         JLabel text = new JLabel("이대로 결제 하시겠습니까?");
-        JButton confirm = new JButton("이대로 결제");
-        JButton back = new JButton("메뉴 다시 고르기");
+        JButton moremenu = new JButton("메뉴 더 고르기");
+        JButton confirm = new JButton("결제하기");
 
         price.setFont(font1);
         text.setFont(font1);
@@ -42,26 +44,31 @@ public class orderCheck extends JFrame {
         c.add(price);
         c.add(text);
         c.add(confirm);
-        c.add(back);
+        c.add(moremenu);
 
         this.setVisible(true);
 
         //eventListener
 
-        confirm.addActionListener(new ActionListener() {
+        moremenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //ㅇㅇㅇㅇ얼마 결제가 완료되었습니다 창 나오게
-                // 결제 완료 다이얼로그 띄우기
-                JOptionPane.showConfirmDialog(c,Menu.price + "원 결제가 완료되었습니다","Message", JOptionPane.CLOSED_OPTION);
+                // 장바구니에 추가
+                JOptionPane.showConfirmDialog(c,"추가되었습니다","Message", JOptionPane.CLOSED_OPTION);
+                new Menu();
+                setVisible(false);
+
 
             }
         });
 
-        back.addActionListener(new ActionListener() {
+        confirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Menu();
+                JOptionPane.showConfirmDialog(c,Menu.price + "원 결제가 완료되었습니다","Message", JOptionPane.CLOSED_OPTION);
+                //전체창 닫기
+                setVisible(false);
+
             }
         });
 

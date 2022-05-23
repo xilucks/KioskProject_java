@@ -51,6 +51,8 @@ public class Menu extends JFrame {
         //        item1.setPreferredSize(new Dimension(300, 50)); //버튼 크기 조절
         //setTitle
         setTitle("메뉴를 골라주세요");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         //Component Setting
         JPanel header = new JPanel();

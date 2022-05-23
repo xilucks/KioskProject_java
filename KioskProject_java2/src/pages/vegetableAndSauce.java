@@ -25,6 +25,8 @@ public class vegetableAndSauce extends JFrame {
         c.setBackground(new Color(238,238,238));
         c.setLayout(new FlowLayout());
         setTitle("야채와 소스를 골라주세요");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         //폰트
         Font font1 = new Font("맑은고딕",Font.BOLD, 40);
@@ -138,6 +140,8 @@ public class vegetableAndSauce extends JFrame {
                 }
 
                 new set();
+                setVisible(false);
+
             }
 
 

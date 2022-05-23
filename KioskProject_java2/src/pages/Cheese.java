@@ -25,13 +25,14 @@ public class Cheese extends JFrame {
         //        item1.setPreferredSize(new Dimension(300, 50)); //버튼 크기 조절
         //setTitle
         setTitle("메인 메뉴");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton american = new JButton("아메리칸 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\americanCheese.jpeg"));
-        JButton mozzarella = new JButton("모짜렐라 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\MozzarellaCheese.jpeg"));
-        JButton shredded = new JButton("슈레드 치즈", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\shreddedCheese.jpeg"));
-        JButton none = new JButton("치즈 선택안함", Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\cheese\\X.png"));
+        JButton american = new JButton("아메리칸 치즈", Menu.resize("KioskProject_java2/image/cheese/americanCheese.jpeg"));
+        JButton mozzarella = new JButton("모짜렐라 치즈", Menu.resize("KioskProject_java2/image/cheese/MozzarellaCheese.jpeg"));
+        JButton shredded = new JButton("슈레드 치즈", Menu.resize("KioskProject_java2/image/cheese/shreddedCheese.jpeg"));
+        JButton none = new JButton("치즈 선택안함", Menu.resize("KioskProject_java2/image/cheese/X.png"));
         Button bucketButton = new Button("장바구니");
 
         //메뉴판 제작
@@ -74,6 +75,8 @@ public class Cheese extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Menu.cheese = "아메리칸 치즈";
                 new vegetableAndSauce();
+                setVisible(false);
+
             }
         });
         mozzarella.addActionListener(new ActionListener() {
@@ -81,6 +84,8 @@ public class Cheese extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Menu.cheese = "모짜렐라 치즈";
                 new vegetableAndSauce();
+                setVisible(false);
+
             }
         });
         shredded.addActionListener(new ActionListener() {
@@ -88,14 +93,18 @@ public class Cheese extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Menu.cheese = "슈레드 치즈";
                 new vegetableAndSauce();
-                    }
+                setVisible(false);
+
+            }
         });
         none.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Menu.cheese = "없음";
                 new vegetableAndSauce();
-                    }
+                setVisible(false);
+
+            }
         });
 
         bucketButton.addActionListener(new ActionListener() {
@@ -103,7 +112,6 @@ public class Cheese extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 new bucket();
                 new vegetableAndSauce();
-                setVisible(false);
             }
         });
 
