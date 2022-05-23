@@ -40,9 +40,11 @@ public class Bread extends JFrame {
         //Component Setting
         JPanel header = new JPanel();
         JButton Flat = new JButton("플랫브레드", resize("KioskProject_java2/image/bread/Flat.jpeg"));
-        JButton Heaty = new JButton("하티", resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\Heaty.jpeg"));
-        JButton wheat = new JButton("위트", resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\wheat.jpeg"));
-        JButton white = new JButton("화이트", resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\bread\\white.jpeg"));
+
+        JButton Heaty = new JButton("하티", resize("KioskProject_java2/image/bread/Heaty.jpeg"));
+        JButton wheat = new JButton("위트", resize("KioskProject_java2/image/bread/wheat.jpeg"));
+        JButton white = new JButton("화이트", resize("KioskProject_java2/image/bread/white.jpeg"));
+
         Button bucketButton = new Button("장바구니");
         
         //메뉴판 제작

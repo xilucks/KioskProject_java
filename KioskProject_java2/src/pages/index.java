@@ -17,7 +17,7 @@ public class index extends JFrame {
 
 
         //set Component
-        JLabel logo = new JLabel(Menu.resize("C:\\Users\\HONG SEO I\\Desktop\\Project\\2022\\Kiosk_project\\KioskProject_java2\\image\\logo.png"));
+        JLabel logo = new JLabel(Menu.resize("KioskProject_java2/image/logo.png"));
         Button start = new Button("주문 시작하기");
         Button close = new Button("닫기");
         JPanel logoArea = new JPanel();

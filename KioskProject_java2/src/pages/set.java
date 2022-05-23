@@ -28,7 +28,7 @@ public class set extends JFrame {
 
 
         //단픔, 세트 jbutton
-        Button pickset = new Button("세트");
+        Button pickset = new Button("세트(+1500원)");
         Button single = new Button("단품");
 
         JPanel buttonz = new JPanel();

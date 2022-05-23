@@ -54,6 +54,7 @@ public class orderCheck extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // 장바구니에 추가
+                //nowBucket().add(nowBucket);
                 JOptionPane.showConfirmDialog(c,"추가되었습니다","Message", JOptionPane.CLOSED_OPTION);
                 new Menu();
                 setVisible(false);
