@@ -1,5 +1,7 @@
 package pages;
 
+import item.Bread;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,6 +15,7 @@ public class orderCheck extends JFrame {
     public orderCheck(){
         setTitle("주문 내역 확인");
         setSize(800,600);
+        setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
@@ -54,8 +57,10 @@ public class orderCheck extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // 장바구니에 추가
-                //nowBucket().add(nowBucket);
+                
+
                 JOptionPane.showConfirmDialog(c,"추가되었습니다","Message", JOptionPane.CLOSED_OPTION);
+
                 new Menu();
                 setVisible(false);
 
