@@ -22,10 +22,11 @@ public class Cheese extends JFrame {
     //resize method
 
     public Cheese() {
-        //        item1.setPreferredSize(new Dimension(300, 50)); //버튼 크기 조절
+
         //setTitle
         setTitle("메인 메뉴");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         //Component Setting
         JPanel header = new JPanel();
@@ -35,6 +36,7 @@ public class Cheese extends JFrame {
         JButton none = new JButton("치즈 선택안함", Menu.resize("KioskProject_java2/image/cheese/X.png"));
         JButton bucketButton = new JButton("장바구니");
 
+
         //버튼디자인
         american.setBackground(Color.WHITE);
         mozzarella.setBackground(Color.WHITE);
@@ -43,6 +45,7 @@ public class Cheese extends JFrame {
         bucketButton.setBackground(Color.black);
         bucketButton.setForeground(Color.WHITE);
 
+
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2,2));
         menu.add(american);
@@ -50,11 +53,13 @@ public class Cheese extends JFrame {
         menu.add(shredded);
         menu.add(none);
 
+
         //Container Setting
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         c.setBackground(new Color(238,238,238));
         header.add(new JLabel("치즈를 골라주세요"));
+
 
         //폰트
         Font font1 = new Font("나눔고딕",Font.BOLD, 20);
@@ -62,11 +67,13 @@ public class Cheese extends JFrame {
         bucketButton.setBackground(new Color(0,85,67));
         bucketButton.setForeground(Color.WHITE);
 
+
         //장바구니
         JPanel nowBucket;
         nowBucket = nowBucket();
 
-        //test data
+
+        //add
         c.add(header);
         c.add(menu);
         c.add(nowBucket);
@@ -78,8 +85,8 @@ public class Cheese extends JFrame {
         setSize(800,600);
         setVisible(true);
 
-        //eventListener
 
+        //eventListener
         american.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -82,6 +82,7 @@ public class vegetableAndSauce extends JFrame {
         hd.setForeground(Color.WHITE);
         header.add(hd);
 
+
         //디자인
         Font font1 = new Font("나눔고딕",Font.BOLD, 40);
         hd.setFont(font1);
@@ -93,6 +94,7 @@ public class vegetableAndSauce extends JFrame {
         //컴포넌트 디자인
         vegetablesPanel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "야채종류" ,TitledBorder.LEADING,TitledBorder.TOP,null,new Color(0,0,0)));
         saucePanel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "소스종류" ,TitledBorder.LEADING,TitledBorder.TOP,null,new Color(0,0,0)));
+
 
         //컴포넌트 추가
         c.add(header);

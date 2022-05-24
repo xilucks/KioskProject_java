@@ -27,12 +27,13 @@ public class set extends JFrame {
         Font font2 = new Font("맑은고딕",Font.BOLD, 20);
 
 
+        //장바구니
         JPanel nowBucket;
         nowBucket = nowBucket();
         nowBucket.setFont(font2);
 
 
-        //단픔, 세트 jbutton
+        //jbutton
         JButton pickset = new JButton("세트(+1500원)");
         JButton single = new JButton("단품");
 
@@ -59,13 +60,18 @@ public class set extends JFrame {
         pickset.setForeground(Color.WHITE);
         single.setBackground(Color.white);
 
+
+        //add
         c.add(header);
         c.add(buttonz, new FlowLayout());
         c.add(nowBucket);
 
+
+        //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
         setSize(800, 600);
         setVisible(true);
+
 
         //eventListener
         pickset.addActionListener(new ActionListener() {

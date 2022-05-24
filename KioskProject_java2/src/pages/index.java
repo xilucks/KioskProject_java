@@ -12,6 +12,7 @@ public class index extends JFrame {
     public static ArrayList<Bread> breadList = new ArrayList<>();
     public index(){
 
+
         //set Component
         JLabel logo = new JLabel(Menu.resize("KioskProject_java2/image/logo.png"));
         JButton start = new JButton("주문 시작하기");
@@ -24,8 +25,11 @@ public class index extends JFrame {
         setTitle("시작하기");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+
+        //container
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
+
 
         //button 디자인 설정
         GridLayout btns = new GridLayout(2,1, 0, 20);
@@ -37,8 +41,6 @@ public class index extends JFrame {
         start.setForeground(Color.WHITE);
         close.setBackground(new Color(0,85,67));
         close.setForeground(Color.WHITE);
-
-
 
 
         //layout

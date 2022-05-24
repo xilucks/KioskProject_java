@@ -29,10 +29,12 @@ public class orderCheck extends JFrame {
             nowPrice += breadList.get(i).price;
         }
 
+
         //container
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
         c.setLayout(new GridLayout(6,1));
+
 
         //JPanel
         JPanel header = new JPanel();
@@ -40,13 +42,14 @@ public class orderCheck extends JFrame {
         JPanel nowBucket = new JPanel();
         JPanel btnz = new JPanel();
 
-        //jlabel, jbutton
+
+        //JLabel, JButton
         JLabel order = new JLabel("<html><br><br> 주문 내역 <br></html>");
         JLabel price = new JLabel("<html><br> 총 결제 비용: " + String.valueOf(nowPrice)+"원<br> 이대로 결제 하시겠습니까? <html>");
         JButton moremenu = new JButton("메뉴 더 고르기");
         JButton confirm = new JButton("결제하기");
 
-        //panel에 배치
+        //add
         header.add(order);
         text.add(price);
         btnz.add(moremenu);
@@ -87,16 +90,14 @@ public class orderCheck extends JFrame {
         confirm.setFont(font2);
 
 
-
-
         //콘테이너 배치
         c.add(header);
         c.add(nowBucket);
         c.add(text);
         c.add(btnz);
 
-        //eventListener
 
+        //eventListener
         moremenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

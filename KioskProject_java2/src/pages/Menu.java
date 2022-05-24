@@ -48,7 +48,7 @@ public class Menu extends JFrame {
 
 
     public Menu() {
-        //        item1.setPreferredSize(new Dimension(300, 50)); //버튼 크기 조절
+
         //setTitle
         setTitle("메뉴를 골라주세요");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -61,8 +61,8 @@ public class Menu extends JFrame {
         JButton itbmt = new JButton("<html> 이탈리안 BMT <br> 5400원 </html>", resize("KioskProject_java2/image/menu/itbmt.png"));
         JButton lostchicken = new JButton("<html> 로스트 치킨 <br> 6100원 </html>", resize("KioskProject_java2/image/menu/lostchicken.png"));
         JButton meatmball = new JButton("<html> 미트볼 <br> 6500원 </html>", resize("KioskProject_java2/image/menu/meatball.png"));
-        JPanel nowOrder = new JPanel();
         JButton bucketButton = new JButton("장바구니");
+
 
         //디자인
         eggm.setBackground(Color.WHITE);
@@ -73,7 +73,6 @@ public class Menu extends JFrame {
         bucketButton.setForeground(Color.WHITE);
 
 
-
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2, 2));
         menu.add(eggm);
@@ -81,34 +80,33 @@ public class Menu extends JFrame {
         menu.add(lostchicken);
         menu.add(meatmball);
 
-        //현재 주문중인 상품
-        int vegetableNum = vegetables.size();
-        int sourceNum = sauces.size();
-        boolean bolSet = set;
 
         //Container Setting
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
         c.setLayout(new FlowLayout());
 
+
         //Font
         header.setFont(new Font("나눔고딕", Font.PLAIN, 50));
-        Font font1 = new Font("나눔고딕",Font.BOLD, 20);
-        bucketButton.setFont(font1);
+        bucketButton.setFont(new Font("나눔고딕",Font.BOLD, 20));
         
         //test data
         JPanel nowBucket;
         nowBucket = nowBucket();
 
+        //add
         c.add(header);
         c.add(menu);
         c.add(nowBucket);
         c.add(bucketButton);
 
+
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
         setSize(800, 600);
         setVisible(true);
+
 
         //eventListener
         eggm.addActionListener(new ActionListener() {

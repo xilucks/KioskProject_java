@@ -14,19 +14,20 @@ public class bucket extends JFrame {
         setTitle("장바구니");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        //container
         Container c = getContentPane();
         c.setLayout(new FlowLayout(FlowLayout.CENTER, 400, 10));
+
+        //header: 장바구니
         JPanel header = new JPanel();
         JLabel hd = new JLabel("장바구니");
         header.add(hd);
-
-        //폰트
-        Font font1 = new Font("나눔고딕",Font.BOLD, 20);
         header.setBackground(new Color(0,85,67));
         hd.setForeground(Color.WHITE);
-        hd.setFont(font1);
+        hd.setFont(new Font("나눔고딕", Font.BOLD, 20));
         c.add(header);
 
+        // 주문내역
         for(int i=0; i<index.breadList.size(); i++) {
             JPanel panel = new JPanel();
             panel.setLayout(new GridLayout(6,1));
@@ -41,8 +42,7 @@ public class bucket extends JFrame {
             c.add(panel);
         }
 
-        //장바구니 추가
-
+        //돌아가기 버튼
         JButton tmp = new JButton("돌아가기");
         tmp.setBackground(new Color(0, 85, 67));
         tmp.setForeground(Color.WHITE);
