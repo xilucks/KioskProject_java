@@ -62,6 +62,17 @@ public class Menu extends JFrame {
         JButton lostchicken = new JButton("<html> 로스트 치킨 <br> 6100원 </html>", resize("KioskProject_java2/image/menu/lostchicken.png"));
         JButton meatmball = new JButton("<html> 미트볼 <br> 6500원 </html>", resize("KioskProject_java2/image/menu/meatball.png"));
         JPanel nowOrder = new JPanel();
+        JButton bucketButton = new JButton("장바구니");
+
+        //디자인
+        eggm.setBackground(Color.WHITE);
+        itbmt.setBackground(Color.WHITE);
+        lostchicken.setBackground(Color.WHITE);
+        meatmball.setBackground(Color.WHITE);
+        bucketButton.setBackground(new Color(0,85,67));
+        bucketButton.setForeground(Color.WHITE);
+
+
 
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2, 2));
@@ -75,17 +86,14 @@ public class Menu extends JFrame {
         int sourceNum = sauces.size();
         boolean bolSet = set;
 
-        //test data
-        Button bucketButton = new Button("장바구니");
-
         //Container Setting
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
         c.setLayout(new FlowLayout());
 
         //Font
-        Font font1 = new Font("나눔고딕",Font.BOLD, 20);
         header.setFont(new Font("나눔고딕", Font.PLAIN, 50));
+        Font font1 = new Font("나눔고딕",Font.BOLD, 20);
         bucketButton.setFont(font1);
         
         //test data

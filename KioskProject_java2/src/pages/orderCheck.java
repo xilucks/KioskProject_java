@@ -16,68 +16,84 @@ import static pages.index.breadList;
 public class orderCheck extends JFrame {
 
     public orderCheck(){
-        //금액정산
 
         setTitle("주문 내역 확인");
         setSize(800,600);
-        setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
+        // 금액정산
+        int nowPrice = 0;
+        for(int i=0; i<index.breadList.size(); i++) {
+            nowPrice += breadList.get(i).price;
+        }
+
+        //container
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
         c.setLayout(new GridLayout(6,1));
-        
 
-        JPanel check = new JPanel();
-        /*check.setAlignmentX(CENTER_ALIGNMENT);
-        check.setAlignmentY(CENTER_ALIGNMENT);
-        */
-
+        //JPanel
+        JPanel header = new JPanel();
+        JPanel text = new JPanel();
         JPanel nowBucket = new JPanel();
+        JPanel btnz = new JPanel();
 
+        //jlabel, jbutton
+        JLabel order = new JLabel("<html><br><br> 주문 내역 <br></html>");
+        JLabel price = new JLabel("<html><br> 총 결제 비용: " + String.valueOf(nowPrice)+"원<br> 이대로 결제 하시겠습니까? <html>");
+        JButton moremenu = new JButton("메뉴 더 고르기");
+        JButton confirm = new JButton("결제하기");
+
+        //panel에 배치
+        header.add(order);
+        text.add(price);
+        btnz.add(moremenu);
+        btnz.add(confirm);
+
+        this.setVisible(true);
+
+
+        //주문내역
         for(int i=0; i<index.breadList.size(); i++) {
             JPanel panel = new JPanel();
             Bread now_bread = index.breadList.get(i);
-            panel.add(new JLabel("<html><br> 선택한 메뉴" + now_bread.getCore()+"<br></html>"));
-            panel.add(new JLabel("<html><br> 선택한 빵" + now_bread.getBread()+"<br></html>"));
-            panel.add(new JLabel("<html><br> 선택한 치즈" + now_bread.getCheese()+"<br></html>"));
-            panel.add(new JLabel("<html><br> 선택한 야채" + now_bread.getVegetables().size()+"개 <br></html>"));
-            panel.add(new JLabel("<html><br> 선택한 소스" + now_bread.getSauce().size()+"개 <br></html>"));
-            panel.add(new JLabel("<html><br> 세트 여부" + now_bread.getSet()+"<br></html>"));
+            panel.add(new JLabel("<html><br> 선택한 메뉴:" + now_bread.getCore()+"<br></html>"));
+            panel.add(new JLabel("<html><br> 선택한 빵:" + now_bread.getBread()+"<br></html>"));
+            panel.add(new JLabel("<html><br> 선택한 치즈:" + now_bread.getCheese()+"<br></html>"));
+            panel.add(new JLabel("<html><br> 선택한 야채:" + now_bread.getVegetables().size()+"개 <br></html>"));
+            panel.add(new JLabel("<html><br> 선택한 소스:" + now_bread.getSauce().size()+"개 <br></html>"));
+            panel.add(new JLabel("<html><br> 세트 여부:" + now_bread.getSet()+"<br></html>"));
             panel.add(new JLabel());
             nowBucket.add(panel);
         }
 
-        //폰트
-        Font font1 = new Font("맑은고딕",Font.BOLD, 20);
-        c.setFont(font1);
+        //header, nowBucket, text, btnz 디자인
+        header.setBackground(new Color(0,85,67));
+        order.setForeground(Color.WHITE);
+        moremenu.setBackground(new Color(0,85,67));
+        moremenu.setForeground(Color.WHITE);
+        confirm.setBackground(Color.white);
 
-        //금액정산
-        int nowPrice = 0;
-        for(int i=0; i<index.breadList.size(); i++) {
-            nowPrice += breadList.get(i).price;
+        //font
+        Font font1 = new Font("나눔고딕", Font.BOLD, 40);
+        Font font2 = new Font("나눔고딕", Font.PLAIN, 20);
+        order.setFont(font2);
+        price.setFont(font2);
+        moremenu.setPreferredSize(new Dimension(200,100));
+        confirm.setPreferredSize(new Dimension(200,100));
+        moremenu.setFont(font2);
+        confirm.setFont(font2);
 
-        }
 
-        JLabel order = new JLabel("<html><br> 주문 내역 <br></html>");
-        JLabel price = new JLabel("<html><br> 총 결제 비용: " + String.valueOf(nowPrice)+"원<br><html>");
-        JLabel text = new JLabel("이대로 결제 하시겠습니까?");
-        JButton moremenu = new JButton("메뉴 더 고르기");
-        JButton confirm = new JButton("결제하기");
 
-        price.setFont(font1);
-        text.setFont(font1);
-        order.setFont(font1);
 
-        c.add(order);
+        //콘테이너 배치
+        c.add(header);
         c.add(nowBucket);
-        c.add(price);
         c.add(text);
-        c.add(confirm);
-        c.add(moremenu);
-
-        this.setVisible(true);
+        c.add(btnz);
 
         //eventListener
 

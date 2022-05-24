@@ -23,11 +23,13 @@ public class set extends JFrame {
 
 
         //폰트
-        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
+        Font font1 = new Font("맑은고딕",Font.BOLD, 30);
+        Font font2 = new Font("맑은고딕",Font.BOLD, 20);
+
 
         JPanel nowBucket;
         nowBucket = nowBucket();
-        nowBucket.setFont(font1);
+        nowBucket.setFont(font2);
 
 
         //단픔, 세트 jbutton
@@ -35,23 +37,27 @@ public class set extends JFrame {
         JButton single = new JButton("단품");
 
         JPanel buttonz = new JPanel();
+        buttonz.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
         buttonz.add(single);
         buttonz.add(pickset);
-
-        /*
-        JPanel header = new JPanel();
-        header.add(new JLabel("<html><br><br><br> 세트메뉴를 선택하시겠습니까? </html>"));
-        */
+        single.setPreferredSize(new Dimension(200,100));
+        pickset.setPreferredSize(new Dimension(200,100));
 
         JPanel header = new JPanel();
-        JLabel hd = new JLabel("세트메뉴를 선택하시겠습니까?");
+        JLabel hd = new JLabel("<HTML><BR><BR> 세트메뉴를 선택하시겠습니까? </HTML>");
         hd.setFont(font1);
         header.add(hd);
 
         //font
-        //header.setFont(font1);
-        pickset.setFont(font1);
-        single.setFont(font1);
+        pickset.setFont(font2);
+        single.setFont(font2);
+
+        //디자인
+        header.setBackground(new Color(0,85,67));
+        hd.setForeground(Color.WHITE);
+        pickset.setBackground(new Color(0, 85,67));
+        pickset.setForeground(Color.WHITE);
+        single.setBackground(Color.white);
 
         c.add(header);
         c.add(buttonz, new FlowLayout());

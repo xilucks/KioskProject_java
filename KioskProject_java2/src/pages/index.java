@@ -31,10 +31,16 @@ public class index extends JFrame {
         GridLayout btns = new GridLayout(2,1, 0, 20);
         buttons.setLayout(btns);
         start.setPreferredSize(new Dimension(250,70));  
-        start.setFont(new Font("나눔고딕", Font.PLAIN, 20));
-        close.setFont(new Font("나눔고딕", Font.PLAIN, 20));
-    
-        
+        start.setFont(new Font("나눔고딕", Font.BOLD, 20));
+        close.setFont(new Font("나눔고딕", Font.BOLD, 20));
+        start.setBackground(new Color(0,85,67));
+        start.setForeground(Color.WHITE);
+        close.setBackground(new Color(0,85,67));
+        close.setForeground(Color.WHITE);
+
+
+
+
         //layout
         c.setLayout(new FlowLayout(FlowLayout.CENTER, 500, 50));
         logoArea.add(logo);

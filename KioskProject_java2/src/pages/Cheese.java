@@ -33,7 +33,15 @@ public class Cheese extends JFrame {
         JButton mozzarella = new JButton("모짜렐라 치즈", Menu.resize("KioskProject_java2/image/cheese/MozzarellaCheese.jpeg"));
         JButton shredded = new JButton("슈레드 치즈", Menu.resize("KioskProject_java2/image/cheese/shreddedCheese.jpeg"));
         JButton none = new JButton("치즈 선택안함", Menu.resize("KioskProject_java2/image/cheese/X.png"));
-        Button bucketButton = new Button("장바구니");
+        JButton bucketButton = new JButton("장바구니");
+
+        //버튼디자인
+        american.setBackground(Color.WHITE);
+        mozzarella.setBackground(Color.WHITE);
+        shredded.setBackground(Color.WHITE);
+        none.setBackground(Color.WHITE);
+        bucketButton.setBackground(Color.black);
+        bucketButton.setForeground(Color.WHITE);
 
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2,2));
@@ -50,7 +58,9 @@ public class Cheese extends JFrame {
 
         //폰트
         Font font1 = new Font("나눔고딕",Font.BOLD, 20);
-        c.setFont(font1);
+        bucketButton.setFont(font1);
+        bucketButton.setBackground(new Color(0,85,67));
+        bucketButton.setForeground(Color.WHITE);
 
         //장바구니
         JPanel nowBucket;

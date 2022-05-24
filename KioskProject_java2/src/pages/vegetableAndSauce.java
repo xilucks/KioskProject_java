@@ -25,7 +25,7 @@ public class vegetableAndSauce extends JFrame {
         //Container Setting
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
-        c.setLayout(new FlowLayout());
+        c.setLayout(new GridLayout(5,1));
         setTitle("야채와 소스를 골라주세요");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -77,13 +77,17 @@ public class vegetableAndSauce extends JFrame {
 
         //header
         JPanel header = new JPanel();
+        header.setBackground(new Color(0, 85, 67));
         JLabel hd = new JLabel("야채와 소스를 선택해주세요.");
+        hd.setForeground(Color.WHITE);
         header.add(hd);
 
-        //font
+        //디자인
         Font font1 = new Font("나눔고딕",Font.BOLD, 40);
         hd.setFont(font1);
-        c.setFont(font1);
+        submit.setFont(font1);
+        submit.setBackground(new Color(0,85,67));
+        submit.setForeground(Color.WHITE);
 
 
         //컴포넌트 디자인
