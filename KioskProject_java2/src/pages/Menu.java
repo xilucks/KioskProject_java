@@ -56,6 +56,7 @@ public class Menu extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
+        header.add(new JLabel("메뉴를 선택해주세요."));
         JButton eggm = new JButton("<html> 에그마요 <br> 4500원 </html>", resize("KioskProject_java2/image/menu/eggm.png"));
         JButton itbmt = new JButton("<html> 이탈리안 BMT <br> 5400원 </html>", resize("KioskProject_java2/image/menu/itbmt.png"));
         JButton lostchicken = new JButton("<html> 로스트 치킨 <br> 6100원 </html>", resize("KioskProject_java2/image/menu/lostchicken.png"));
@@ -83,12 +84,11 @@ public class Menu extends JFrame {
         c.setBackground(new Color(238,238,238));
         c.setLayout(new FlowLayout());
 
-        //폰트
-        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
-        c.setFont(font1);
-
-        header.add(new JLabel("메뉴를 선택해주세요."));
-
+        //Font
+        Font font1 = new Font("나눔고딕",Font.BOLD, 20);
+        header.setFont(new Font("나눔고딕", Font.PLAIN, 50));
+        bucketButton.setFont(font1);
+        
         //test data
         JPanel nowBucket;
         nowBucket = nowBucket();

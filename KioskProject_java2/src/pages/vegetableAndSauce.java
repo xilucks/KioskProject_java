@@ -9,6 +9,8 @@ package pages;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
+import javax.swing.text.StyledEditorKit.FontSizeAction;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,18 +29,16 @@ public class vegetableAndSauce extends JFrame {
         setTitle("야채와 소스를 골라주세요");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
-        //폰트
-        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
-        c.setFont(font1);
-
-
-
         //컴포넌트 생성
         JPanel vegetablesPanel = new JPanel();
         JPanel saucePanel = new JPanel();
         JButton submit = new JButton("확인");
         JPanel nowBucket = nowBucket();
+
+        //컴포넌트 레이아웃 설정
+        GridLayout sauce = new GridLayout(2,4);
+        saucePanel.setLayout(sauce);
+        c.setLayout(new FlowLayout(FlowLayout.CENTER, 500, 50));
 
 
             //vegetablesPanel 수정
@@ -75,16 +75,28 @@ public class vegetableAndSauce extends JFrame {
         saucePanel.add(salt);
         saucePanel.add(pepper);
 
+        //header
+        JPanel header = new JPanel();
+        JLabel hd = new JLabel("야채와 소스를 선택해주세요.");
+        header.add(hd);
+
+        //font
+        Font font1 = new Font("나눔고딕",Font.BOLD, 40);
+        hd.setFont(font1);
+        c.setFont(font1);
+
 
         //컴포넌트 디자인
         vegetablesPanel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "야채종류" ,TitledBorder.LEADING,TitledBorder.TOP,null,new Color(0,0,0)));
         saucePanel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "소스종류" ,TitledBorder.LEADING,TitledBorder.TOP,null,new Color(0,0,0)));
 
         //컴포넌트 추가
+        c.add(header);
         c.add(vegetablesPanel);
         c.add(saucePanel);
-        c.add(submit);
         c.add(nowBucket);
+        c.add(submit);
+
 
         //submit 액션
         submit.addActionListener(new ActionListener() {

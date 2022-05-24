@@ -33,14 +33,14 @@ public class Bread extends JFrame {
     public Bread() {
         //        item1.setPreferredSize(new Dimension(300, 50)); //버튼 크기 조절
         //setTitle
-        setTitle("메인 메뉴");
+        setTitle("빵 종류 선택");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         //Component Setting
         JPanel header = new JPanel();
+        header.add(new JLabel("빵을 골라주세요"));
         JButton Flat = new JButton("플랫브레드", resize("KioskProject_java2/image/bread/Flat.jpeg"));
-
         JButton Heaty = new JButton("하티", resize("KioskProject_java2/image/bread/Heaty.jpeg"));
         JButton wheat = new JButton("위트", resize("KioskProject_java2/image/bread/wheat.jpeg"));
         JButton white = new JButton("화이트", resize("KioskProject_java2/image/bread/white.jpeg"));
@@ -59,9 +59,8 @@ public class Bread extends JFrame {
         c.setLayout(new FlowLayout());
         menu.setPreferredSize(new Dimension(600,500));
         c.setBackground(new Color(238,238,238));
-        header.add(new JLabel("빵을 골라주세요"));
-
-        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
+        
+        Font font1 = new Font("맑은고딕",Font.BOLD, 20);
         c.setFont(font1);
 
         //장바구니

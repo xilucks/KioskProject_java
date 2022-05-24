@@ -49,7 +49,7 @@ public class Cheese extends JFrame {
         header.add(new JLabel("치즈를 골라주세요"));
 
         //폰트
-        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
+        Font font1 = new Font("나눔고딕",Font.BOLD, 20);
         c.setFont(font1);
 
         //장바구니

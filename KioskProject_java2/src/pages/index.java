@@ -12,14 +12,10 @@ public class index extends JFrame {
     public static ArrayList<Bread> breadList = new ArrayList<>();
     public index(){
 
-        //라벨 및 폰트
-        Font font1 = new Font("맑은고딕",Font.BOLD, 40);
-
-
         //set Component
         JLabel logo = new JLabel(Menu.resize("KioskProject_java2/image/logo.png"));
-        Button start = new Button("주문 시작하기");
-        Button close = new Button("닫기");
+        JButton start = new JButton("주문 시작하기");
+        JButton close = new JButton("닫기");
         JPanel logoArea = new JPanel();
         JPanel buttons = new JPanel();
 
@@ -30,10 +26,16 @@ public class index extends JFrame {
 
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
-        start.setFont(font1);
-        close.setFont(font1);
-        c.setFont(font1);
 
+        //button 디자인 설정
+        GridLayout btns = new GridLayout(2,1, 0, 20);
+        buttons.setLayout(btns);
+        start.setPreferredSize(new Dimension(250,70));  
+        start.setFont(new Font("나눔고딕", Font.PLAIN, 20));
+        close.setFont(new Font("나눔고딕", Font.PLAIN, 20));
+    
+        
+        //layout
         c.setLayout(new FlowLayout(FlowLayout.CENTER, 500, 50));
         logoArea.add(logo);
         buttons.add(start);
