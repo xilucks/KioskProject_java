@@ -77,7 +77,6 @@ public class Menu extends JFrame {
 
         //test data
         Button bucketButton = new Button("장바구니");
-        Button Test = new Button("test");
 
         //Container Setting
         Container c = getContentPane();
@@ -97,7 +96,6 @@ public class Menu extends JFrame {
         c.add(menu);
         c.add(nowBucket);
         c.add(bucketButton);
-        c.add(Test);
 
         //set
         setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
@@ -105,14 +103,6 @@ public class Menu extends JFrame {
         setVisible(true);
 
         //eventListener
-        Test.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                breadList.add(new Bread("a", "a", "a", new ArrayList<>(), new ArrayList<>(), false, 0));
-                breadList.add(new Bread("b", "a", "a", new ArrayList<>(), new ArrayList<>(), false, 0));
-            }
-        });
-
         eggm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -157,7 +147,6 @@ public class Menu extends JFrame {
 
             }
         });
-
 
     }
 

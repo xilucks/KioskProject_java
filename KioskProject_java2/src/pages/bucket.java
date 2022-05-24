@@ -43,7 +43,7 @@ public class bucket extends JFrame {
         tmp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new index();
+                setVisible(false);
             }
         });
         c.add(tmp);
