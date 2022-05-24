@@ -27,9 +27,13 @@ public class orderCheck extends JFrame {
         Container c = getContentPane();
         c.setBackground(new Color(238,238,238));
         c.setLayout(new GridLayout(6,1));
-
+        
 
         JPanel check = new JPanel();
+        /*check.setAlignmentX(CENTER_ALIGNMENT);
+        check.setAlignmentY(CENTER_ALIGNMENT);
+        */
+
         JPanel nowBucket = new JPanel();
 
         for(int i=0; i<index.breadList.size(); i++) {
@@ -82,7 +86,7 @@ public class orderCheck extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // 장바구니에 추가
 
-                JOptionPane.showConfirmDialog(c,"추가되었습니다","Message", JOptionPane.CLOSED_OPTION);
+                JOptionPane.showConfirmDialog(c, "장바구니에 추가되었습니다","Message", JOptionPane.CLOSED_OPTION);
 
                 //초기화
                 core = null;

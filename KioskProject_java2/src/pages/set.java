@@ -31,19 +31,25 @@ public class set extends JFrame {
 
 
         //단픔, 세트 jbutton
-        Button pickset = new Button("세트(+1500원)");
-        Button single = new Button("단품");
+        JButton pickset = new JButton("세트(+1500원)");
+        JButton single = new JButton("단품");
 
         JPanel buttonz = new JPanel();
         buttonz.add(single);
         buttonz.add(pickset);
 
-
+        /*
         JPanel header = new JPanel();
         header.add(new JLabel("<html><br><br><br> 세트메뉴를 선택하시겠습니까? </html>"));
+        */
+
+        JPanel header = new JPanel();
+        JLabel hd = new JLabel("세트메뉴를 선택하시겠습니까?");
+        hd.setFont(font1);
+        header.add(hd);
 
         //font
-        header.setFont(font1);
+        //header.setFont(font1);
         pickset.setFont(font1);
         single.setFont(font1);
 
