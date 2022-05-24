@@ -39,14 +39,22 @@ public class Bread extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        header.add(new JLabel("빵을 골라주세요"));
-        JButton Flat = new JButton("플랫브레드", resize("KioskProject_java2/image/bread/Flat.jpeg"));
-        JButton Heaty = new JButton("하티", resize("KioskProject_java2/image/bread/Heaty.jpeg"));
-        JButton wheat = new JButton("위트", resize("KioskProject_java2/image/bread/wheat.jpeg"));
-        JButton white = new JButton("화이트", resize("KioskProject_java2/image/bread/white.jpeg"));
+        JButton Flat = new JButton("플랫브레드", Menu.resize("KioskProject_java2/image/bread/Flat.jpeg"));
+        JButton Heaty = new JButton("하티", Menu.resize("KioskProject_java2/image/bread/Heaty.jpeg"));
+        JButton wheat = new JButton("위트", Menu.resize("KioskProject_java2/image/bread/wheat.jpeg"));
+        JButton white = new JButton("화이트", Menu.resize("KioskProject_java2/image/bread/white.jpeg"));
+        JButton bucketButton = new JButton("장바구니");
+        JLabel hd = new JLabel("빵을 골라주세요");
 
-        Button bucketButton = new Button("장바구니");
-        
+        //버튼디자인
+        Flat.setBackground(Color.WHITE);
+        Heaty.setBackground(Color.WHITE);
+        wheat.setBackground(Color.WHITE);
+        white.setBackground(Color.WHITE);
+        bucketButton.setBackground(Color.black);
+        bucketButton.setForeground(Color.WHITE);
+
+
         //메뉴판 제작
         JPanel menu = new JPanel(new GridLayout(2,2));
         menu.add(Flat);
@@ -57,11 +65,14 @@ public class Bread extends JFrame {
         //Container Setting
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
-        menu.setPreferredSize(new Dimension(600,500));
         c.setBackground(new Color(238,238,238));
-        
-        Font font1 = new Font("맑은고딕",Font.BOLD, 20);
-        c.setFont(font1);
+        header.add(hd);
+
+        //font
+        Font font1 = new Font("나눔고딕",Font.BOLD, 20);
+        bucketButton.setFont(font1);
+        bucketButton.setBackground(new Color(0,85,67));
+        bucketButton.setForeground(Color.WHITE);
 
         //장바구니
         JPanel nowBucket;
