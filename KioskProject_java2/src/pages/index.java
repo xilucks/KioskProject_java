@@ -1,5 +1,6 @@
 package pages;
 
+import function.functions;
 import item.Bread;
 
 import javax.swing.*;
@@ -14,7 +15,7 @@ public class index extends JFrame {
 
 
         //set Component
-        JLabel logo = new JLabel(Menu.resize("KioskProject_java2/image/logo.png"));
+        JLabel logo = new JLabel(functions.resize("KioskProject_java2/image/logo.png"));
         JButton start = new JButton("주문 시작하기");
         JButton close = new JButton("닫기");
         JPanel logoArea = new JPanel();

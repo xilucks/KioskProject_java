@@ -9,6 +9,7 @@ ref:
 
 package pages;
 
+import function.functions;
 import item.Bread;
 
 import javax.swing.*;
@@ -35,17 +36,6 @@ public class Menu extends JFrame {
     public static int price = 0;
 
 
-    //resize method
-    public static ImageIcon resize(String path){
-        ImageIcon icon = new ImageIcon(path);
-        Image img = icon.getImage();
-        Image reSizeImg = img.getScaledInstance(250,200,Image.SCALE_SMOOTH);
-        ImageIcon changeIcon = new ImageIcon(reSizeImg);
-
-        return changeIcon;
-
-    }
-
 
     public Menu() {
 
@@ -57,10 +47,10 @@ public class Menu extends JFrame {
         //Component Setting
         JPanel header = new JPanel();
         header.add(new JLabel("메뉴를 선택해주세요."));
-        JButton eggm = new JButton("<html> 에그마요 <br> 4500원 </html>", resize("KioskProject_java2/image/menu/eggm.png"));
-        JButton itbmt = new JButton("<html> 이탈리안 BMT <br> 5400원 </html>", resize("KioskProject_java2/image/menu/itbmt.png"));
-        JButton lostchicken = new JButton("<html> 로스트 치킨 <br> 6100원 </html>", resize("KioskProject_java2/image/menu/lostchicken.png"));
-        JButton meatmball = new JButton("<html> 미트볼 <br> 6500원 </html>", resize("KioskProject_java2/image/menu/meatball.png"));
+        JButton eggm = new JButton("<html> 에그마요 <br> 4500원 </html>", functions.resize("KioskProject_java2/image/menu/eggm.png"));
+        JButton itbmt = new JButton("<html> 이탈리안 BMT <br> 5400원 </html>", functions.resize("KioskProject_java2/image/menu/itbmt.png"));
+        JButton lostchicken = new JButton("<html> 로스트 치킨 <br> 6100원 </html>", functions.resize("KioskProject_java2/image/menu/lostchicken.png"));
+        JButton meatmball = new JButton("<html> 미트볼 <br> 6500원 </html>", functions.resize("KioskProject_java2/image/menu/meatball.png"));
         JButton bucketButton = new JButton("장바구니");
 
 

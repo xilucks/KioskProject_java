@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-import static Component.Components.nowBucket;
 import static pages.Menu.*;
 import static pages.index.breadList;
 
@@ -26,7 +25,7 @@ public class orderCheck extends JFrame {
         // 금액정산
         int nowPrice = 0;
         for(int i=0; i<index.breadList.size(); i++) {
-            nowPrice += breadList.get(i).price;
+            nowPrice += breadList.get(i).getPrice();
         }
 
 

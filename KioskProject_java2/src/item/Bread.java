@@ -3,12 +3,20 @@ package item;
 import java.util.ArrayList;
 
 public class Bread {
-    String core;
-    String bread;
-    String cheese;
 
-    public int price;
+    // 빵에 들어가는 재료 캡슐화
+    private String core;
+    private String bread;
+    private String cheese;
 
+    private ArrayList<String> vegetables;
+    private ArrayList<String> sauce;
+    private boolean set;
+
+    private int price;
+
+
+    //Getter and Setter
     public String getCore() {
         return core;
     }
@@ -57,10 +65,17 @@ public class Bread {
         this.set = set;
     }
 
-    ArrayList<String> vegetables;
-    ArrayList<String> sauce;
+    public boolean isSet() {
+        return set;
+    }
 
-    private boolean set;
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     public Bread(String core, String bread, String cheese, ArrayList<String> vegetables, ArrayList<String> sauce, boolean set, int price) {
         this.core = core;

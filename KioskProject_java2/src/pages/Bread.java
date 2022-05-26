@@ -9,6 +9,8 @@ ref:
 
 package pages;
 
+import function.functions;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,16 +22,6 @@ import static pages.index.breadList;
 
 public class Bread extends JFrame {
 
-    //resize method
-    public static ImageIcon resize(String path){
-        ImageIcon icon = new ImageIcon(path);
-        Image img = icon.getImage();
-        Image reSizeImg = img.getScaledInstance(200,100,Image.SCALE_SMOOTH);
-        ImageIcon changeIcon = new ImageIcon(reSizeImg);
-
-        return changeIcon;
-
-    }
     public Bread() {
         //        item1.setPreferredSize(new Dimension(300, 50)); //버튼 크기 조절
         //setTitle
@@ -39,10 +31,10 @@ public class Bread extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton Flat = new JButton("플랫브레드", Menu.resize("KioskProject_java2/image/bread/Flat.jpeg"));
-        JButton Heaty = new JButton("하티", Menu.resize("KioskProject_java2/image/bread/Heaty.jpeg"));
-        JButton wheat = new JButton("위트", Menu.resize("KioskProject_java2/image/bread/wheat.jpeg"));
-        JButton white = new JButton("화이트", Menu.resize("KioskProject_java2/image/bread/white.jpeg"));
+        JButton Flat = new JButton("플랫브레드", functions.resize("KioskProject_java2/image/bread/Flat.jpeg"));
+        JButton Heaty = new JButton("하티", functions.resize("KioskProject_java2/image/bread/Heaty.jpeg"));
+        JButton wheat = new JButton("위트", functions.resize("KioskProject_java2/image/bread/wheat.jpeg"));
+        JButton white = new JButton("화이트", functions.resize("KioskProject_java2/image/bread/white.jpeg"));
         JButton bucketButton = new JButton("장바구니");
         JLabel hd = new JLabel("빵을 골라주세요");
 

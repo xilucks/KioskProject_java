@@ -9,6 +9,8 @@ ref:
 
 package pages;
 
+import function.functions;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -30,10 +32,10 @@ public class Cheese extends JFrame {
 
         //Component Setting
         JPanel header = new JPanel();
-        JButton american = new JButton("아메리칸 치즈", Menu.resize("KioskProject_java2/image/cheese/americanCheese.jpeg"));
-        JButton mozzarella = new JButton("모짜렐라 치즈", Menu.resize("KioskProject_java2/image/cheese/MozzarellaCheese.jpeg"));
-        JButton shredded = new JButton("슈레드 치즈", Menu.resize("KioskProject_java2/image/cheese/shreddedCheese.jpeg"));
-        JButton none = new JButton("치즈 선택안함", Menu.resize("KioskProject_java2/image/cheese/X.png"));
+        JButton american = new JButton("아메리칸 치즈", functions.resize("KioskProject_java2/image/cheese/americanCheese.jpeg"));
+        JButton mozzarella = new JButton("모짜렐라 치즈", functions.resize("KioskProject_java2/image/cheese/MozzarellaCheese.jpeg"));
+        JButton shredded = new JButton("슈레드 치즈", functions.resize("KioskProject_java2/image/cheese/shreddedCheese.jpeg"));
+        JButton none = new JButton("치즈 선택안함", functions.resize("KioskProject_java2/image/cheese/X.png"));
         JButton bucketButton = new JButton("장바구니");
 
 
@@ -58,6 +60,7 @@ public class Cheese extends JFrame {
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
         c.setBackground(new Color(238,238,238));
+
         header.add(new JLabel("치즈를 골라주세요"));
 
 
