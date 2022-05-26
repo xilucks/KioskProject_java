@@ -15,11 +15,4 @@ public class functions extends JFrame{
 
     }
 
-    public Container defaultContainer(){
-        Container c = getContentPane();
-        c.setLayout(new FlowLayout());
-        c.setBackground(new Color(238,238,238));
-
-        return c;
-    }
 }
