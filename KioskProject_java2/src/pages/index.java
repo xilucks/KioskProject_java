@@ -13,9 +13,6 @@ public class index extends JFrame {
     public static ArrayList<Bread> breadList = new ArrayList<>();
 
     public index(){
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        setLocation((dim.width/5)-(getWidth()/5), (dim.height/5)-(getHeight()/5));
-
 
         //set Component
         JLabel logo = new JLabel(functions.resize("KioskProject_java2/image/logo.png"));
@@ -57,9 +54,10 @@ public class index extends JFrame {
 
 
         //display setting
-//        setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
-        logo.setHorizontalAlignment(JLabel.CENTER); //로고 가운데 정렬
         setSize(800,600);
+        setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
+        logo.setHorizontalAlignment(JLabel.CENTER); //로고 가운데 정렬
+
         setVisible(true);
 
 
