@@ -8,7 +8,7 @@ public class functions extends JFrame{
     public static ImageIcon resize(String path){
         ImageIcon icon = new ImageIcon(path);
         Image img = icon.getImage();
-        Image reSizeImg = img.getScaledInstance(200,100,Image.SCALE_SMOOTH);
+        Image reSizeImg = img.getScaledInstance(250,100,Image.SCALE_SMOOTH);
         ImageIcon changeIcon = new ImageIcon(reSizeImg);
 
         return changeIcon;
