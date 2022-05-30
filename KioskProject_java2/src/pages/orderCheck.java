@@ -74,8 +74,11 @@ public class orderCheck extends JFrame {
         //header, nowBucket, text, btnz 디자인
         header.setBackground(new Color(0,85,67));
         order.setForeground(Color.WHITE);
-        moremenu.setBackground(new Color(0,85,67));
+
         moremenu.setForeground(Color.WHITE);
+        moremenu.setBackground(new Color(0,85,67));
+
+
         confirm.setBackground(Color.white);
 
         //font
