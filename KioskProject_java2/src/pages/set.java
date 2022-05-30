@@ -68,8 +68,9 @@ public class set extends JFrame {
 
 
         //set
-        setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
         setSize(800, 600);
+        setLocationRelativeTo(null);    //디스플레이 가운데 정렬;
+
         setVisible(true);
 
 
